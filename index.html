@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="./address-book.js"></script>
+  <link href="./styles.css" rel="stylesheet">
+  <title>Address Book</title>
+</head>
+
+<body>
+  <div id="navbar">
+    <span id="title">Address book</span>
+    <span id="add-link" class="link">Add contacts</a>
+  </div>
+  <div id="main">
+    <div id="add-section">
+      <form id="add-form">
+        <label for="name">Name: </label>
+        <input id="name" type="text" required="required"><br>
+        <label for="surname">Surname: </label>
+        <input id="surname" type="text"><br>
+        <label for="phone">Phone number: </label>
+        <input id="phone" type="tel" pattern="[0-9-+() ]+" title="Please use only digits, -, + and ()."><br>
+        <label for="mail">E-mail address: </label>
+        <input id="mail" type="email"><br>
+        <label for="street">Street address: </label>
+        <input id="street" type="text"><br>
+        <label for="code">Postal code: </label>
+        <input id="code" type="text" pattern="[0-9- ]+" title="Please use only digits and -."><br>
+        <label for="city">City: </label>
+        <input id="city" type="text"><br>
+        <input id="edit" type="hidden">
+        <input class="button" type="submit" value="Save">
+      </form>
+    </div>
+    <div id="added">
+      <p>
+        The contact has been saved successfully.
+      </p>
+    </div>
+    <div id="search">
+      <form id="search-form">
+        <input id="search-bar" type="text">
+      </form>
+    </div>
+    <div>
+      <p id="no-contacts">
+        There are no contacts in the address book.
+      </p>
+      <p id="no-found">
+        No contacts match the search criteria.
+      </p>
+    </div>
+    <div id="contacts">
+
+    </div>
+  </div>
+</body>
+
+</html>
